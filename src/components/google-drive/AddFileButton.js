@@ -16,11 +16,11 @@ export default function AddFileButton({ currentFolder }) {
     const file = e.target.files[0]
     if (currentFolder == null || file == null) return
 
-    /*const id = uuidV4()
+    const id = uuidV4()
     setUploadingFiles(prevUploadingFiles => [
       ...prevUploadingFiles,
       { id: id, name: file.name, progress: 0, error: false },
-    ])*/
+    ])
 
     const filePath =
       currentFolder === ROOT_FOLDER
@@ -31,7 +31,7 @@ export default function AddFileButton({ currentFolder }) {
       .ref(`/files/${currentUser.uid}/${filePath}`)
       .put(file)
 
-    /*uploadTask.on(
+    uploadTask.on(
       "state_changed",
       snapshot => {
         const progress = snapshot.bytesTransferred / snapshot.totalBytes
@@ -84,7 +84,7 @@ export default function AddFileButton({ currentFolder }) {
             })
         })
       }
-    )*/
+    )
   }
 
   return (
