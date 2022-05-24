@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap"
 import { useFolder } from "../../hooks/useFolder"
 import AddFolderButton from "./AddFolderButton"
 import AddFileButton from "./AddFileButton"
+import CopyFileLinkButton from "./CopyFileLinkButton"
 import Folder from "./Folder"
 import File from "./File"
 import Navbar from "./Navbar"
@@ -46,6 +47,9 @@ export default function Dashboard() {
                 className="p-2"
               >
                 <File file={childFile} />
+                <br></br><br></br>
+                <CopyFileLinkButton myFile={childFile} />
+                
               </div>
             ))}
           </div>
