@@ -11,6 +11,7 @@ import Navbar from "./Navbar"
 
 import FolderBreadcrumbs from "./FolderBreadcrumbs"
 import { useParams, useLocation } from "react-router-dom"
+import background from "../../bg-dash4.png";
 
 export default function Dashboard() {
   const { folderId } = useParams()
@@ -18,7 +19,7 @@ export default function Dashboard() {
   const { folder, childFolders, childFiles } = useFolder(folderId, state.folder)
 
   return (
-    <>
+    <div style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.1)), url(${background})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', width: '100vw', height: '100vh'}}>
       <Navbar />
       <Container fluid>
         <div className="d-flex align-items-center">
@@ -51,13 +52,13 @@ export default function Dashboard() {
                 <File file={childFile} />
                 <br></br><br></br>
                 <CopyFileLinkButton myFile={childFile} />
-                
+
               </div>
             ))}
           </div>
         )}
         
       </Container>
-    </>
+    </div>
   )
 }
