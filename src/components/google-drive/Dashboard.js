@@ -4,6 +4,7 @@ import { useFolder } from "../../hooks/useFolder"
 import AddFolderButton from "./AddFolderButton"
 import AddFileButton from "./AddFileButton"
 import CopyFileLinkButton from "./CopyFileLinkButton"
+import DeleteFileLinkButton from "./DeleteFileLinkButton"
 import Folder from "./Folder"
 import File from "./File"
 import Navbar from "./Navbar"
@@ -50,6 +51,7 @@ export default function Dashboard() {
                 <File file={childFile} />
                 <br></br><br></br>
                 <CopyFileLinkButton myFile={childFile} />
+                <DeleteFileLinkButton myFile={childFile} />
 
               </div>
             ))}
