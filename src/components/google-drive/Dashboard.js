@@ -7,6 +7,8 @@ import CopyFileLinkButton from "./CopyFileLinkButton"
 import Folder from "./Folder"
 import File from "./File"
 import Navbar from "./Navbar"
+
+
 import FolderBreadcrumbs from "./FolderBreadcrumbs"
 import { useParams, useLocation } from "react-router-dom"
 
@@ -54,6 +56,7 @@ export default function Dashboard() {
             ))}
           </div>
         )}
+        
       </Container>
     </>
   )
