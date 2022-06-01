@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom"
 import { useAuth } from "../../contexts/AuthContext"
 import background from "../../zot-logo.png";
-import { Button } from "react-bootstrap"
+import { Button, Form, FormControl } from "react-bootstrap"
 
 
 
@@ -35,6 +35,15 @@ export default function NavbarComponent() {
         Zot Drive
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Form className="d-flex input-group w-auto">
+        <FormControl
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button variant="outline-dark" className="ml-3">Search</Button>
+      </Form>
       <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
         Signed in as: <a href="/user">{currentUser.email}</a> |

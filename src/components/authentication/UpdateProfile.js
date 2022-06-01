@@ -119,7 +119,7 @@ export default function UpdateProfile() {
           <div className="w-100 text-center mt-2">
             <MutedLink href="#">
               Not ready yet?{" "}
-              <BoldLink href="/user" >
+              <BoldLink href="/" >
               Cancel
               </BoldLink>
             </MutedLink>
